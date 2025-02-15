@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - {{ config['school_name'] }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1><a href="/{{ lang }}/index">{{ config['school_name'] }}</a></h1>
+        <nav>
+            {% for lang_code, lang_name in config['languages'].items() %}
+                <a href="/{{ lang_code }}/index">{{ lang_name }}</a> |
+            {% endfor %}
+        </nav>
+    </header>
+    <main>{{ content|safe }}</main>
+    <footer>&copy; {{ year }} {{ config['school_name'] }}</footer>
+</body>
+</html>

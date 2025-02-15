@@ -1,0 +1,7 @@
+school_name: "Example School"
+google_calendar_url: "https://calendar.google.com/calendar/embed?src=example"
+default_language: "en"
+languages:
+  en: "English"
+  nl: "Nederlands"
+  fr: "Français"
